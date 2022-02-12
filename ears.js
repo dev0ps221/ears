@@ -133,6 +133,7 @@ class Ear{
         )
     }
     on(an,fn){
+        console.log('heyy')
         this.evts.do("on",an,fn)
     }
     off(an){
@@ -151,16 +152,19 @@ class Ear{
     mute(){
         this.evts.mute()
     }
+    setReady(){
+        this.ready = true
+    }
+    static build(...obj){
+        console.log(...obj)
+        return Object.assign(new Ear(),...obj)
+    }
     constructor(){  
       this.evts   = new Ears()
+      this.listenReady()
     }
 
 }
-
-let Obj = new Ear()
-console.log(Obj)
-Obj.mute()
-
 
 module.exports = {
     Ears,Ear
