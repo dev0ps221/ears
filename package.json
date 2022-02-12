@@ -1,0 +1,28 @@
+{
+  "name": "@dev0ps221/ears",
+  "version": "0.0.1-beta",
+  "description": "Add event listeners and triggers to any object. ",
+  "main": "ears.js",
+  "scripts": {
+    "test": "node ears.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dev0ps221/ears.git"
+  },
+  "keywords": [
+    "eventlistener",
+    "javascript",
+    "node",
+    "events",
+    "Seybatou",
+    "Mbengue",
+    "Tek-Tech"
+  ],
+  "author": "El Hadji Seybatou Mbengue (Tek-Tech)",
+  "license": "SEE LICENSE IN LICENSE.md",
+  "bugs": {
+    "url": "https://github.com/dev0ps221/ears/issues"
+  },
+  "homepage": "https://github.com/dev0ps221/ears#readme"
+}
