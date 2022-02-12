@@ -96,7 +96,10 @@ class Ears{
         this.evtsInterval = setInterval(()=>{this.eventLoop()},1500)
     }
     endloop(){
-        this.clearInterval(this.evtsInterval)
+        clearInterval(this.evtsInterval)
+    }
+    mute(){
+        this.endloop()
     }
     constructor(){
         this.triggers = {}
@@ -142,6 +145,12 @@ class Ear{
     trigger(an,...args){
         this.evts.do("trigger",an,...args)
     }
+    endloop(){
+        this.mute()
+    }
+    mute(){
+        this.evts.mute()
+    }
     constructor(){  
       this.evts   = new Ears()
     }
@@ -150,6 +159,8 @@ class Ear{
 
 let Obj = new Ear()
 console.log(Obj)
+Obj.mute()
+
 
 module.exports = {
     Ears,Ear
