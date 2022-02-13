@@ -133,11 +133,11 @@ class Ear{
         )
     }
     on(an,fn){
-        console.log('heyy')
+        
         this.evts.do("on",an,fn)
     }
     off(an){
-        console.log('off ',an)
+        
         this.evts.do("off",an)
     }
     forget(an){
@@ -156,7 +156,7 @@ class Ear{
         this.ready = true
     }
     static build(...obj){
-        console.log(...obj)
+        
         return Object.assign(new Ear(),...obj)
     }
     constructor(){  

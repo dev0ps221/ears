@@ -1,6 +1,6 @@
 {
   "name": "@dev0ps221/ears",
-  "version": "0.0.1-beta",
+  "version": "0.0.1-beta-r",
   "description": "Add event listeners and triggers to any object. ",
   "main": "ears.js",
   "scripts": {
