@@ -1,6 +1,6 @@
 {
   "name": "@tek-tech/ears",
-  "version": "0.0.1-beta-r",
+  "version": "0.0.1-beta-r1",
   "description": "Add event listeners and triggers to any object. ",
   "main": "ears.js",
   "scripts": {
