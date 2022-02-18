@@ -165,8 +165,8 @@ class Ear{
     }
 
 }
-
-if((typeof module) != undefined){
+console.log((typeof module))
+if((typeof module) != 'undefined'){
     module.exports = {
         Ears,Ear
     }
