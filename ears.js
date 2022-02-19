@@ -116,7 +116,8 @@ class Ear{
 
 
     whenReady(cb){
-        this.when('ready',cb)
+        if(this.isReady())cb()
+        else    this.when('ready',cb)
     }
     when(context,action){
         this.on(context,action)
@@ -125,7 +126,7 @@ class Ear{
         let readyinterval = null
         readyinterval = setInterval(
             ()=>{
-                if(this.ready){
+                if(this.isReady()){
                 this.trigger('ready',this)
                 clearInterval(readyinterval)
                 }
@@ -135,6 +136,9 @@ class Ear{
     on(an,fn){
         
         this.evts.do("on",an,fn)
+    }
+    isReady(){
+        return this.ready 
     }
     off(an){
         
@@ -161,6 +165,7 @@ class Ear{
     }
     constructor(){  
       this.evts   = new Ears()
+      this.ready = false
       this.listenReady()
     }
 
