@@ -59,18 +59,14 @@ class Ears{
                 }
             ],[
                 'trigger',(triggername,...data)=>{
-                    if(this.getTrigger(triggername)){
-                        this.doTrigger(triggername,this.getTrigger(triggername).getCb(),data)
-                    }else{
-                        let interv = setInterval(
-                            ()=>{
-                                if(this.getTrigger(triggername)){
-                                    this.doTrigger(triggername,this.getTrigger(triggername).getCb(),data)
-                                    clearInterval(interv)
-                                }
+                    let interv = setInterval(
+                        ()=>{
+                            if(this.getTrigger(triggername)){
+                                this.doTrigger(triggername,this.getTrigger(triggername).getCb(),data)
+                                clearInterval(interv)
                             }
-                        )
-                    }    
+                        }
+                    )
                 }
             ]
         ]
@@ -136,6 +132,7 @@ class Ear{
     on(an,fn){
         
         this.evts.do("on",an,fn)
+
     }
     isReady(){
         return this.ready 
