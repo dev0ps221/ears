@@ -168,7 +168,11 @@ class Ear{
 
 }
 if((typeof module) != 'undefined'){
-    module.exports = {
-        Ears,Ear
+    try{
+        module.exports = {
+            Ears,Ear
+        }
+    }catch(e){
+        
     }
 }
