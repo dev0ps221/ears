@@ -168,12 +168,7 @@ class Ear{
 
 }
 if((typeof module) != 'undefined'){
-    try{
-        console.log(typeof window)
-        module.exports = {
-            Ears,Ear
-        }
-    }catch(e){
-
+    module.exports = {
+        Ears,Ear
     }
 }
